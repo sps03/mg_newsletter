@@ -1,5 +1,5 @@
 {
-  "name": "mg-newsletter",
+  "name": "mg_newsletter",
   "version": "3.0.0",
   "description": "",
   "main": "src/server.js",
