@@ -1,0 +1,27 @@
+{
+  "name": "mg-newsletter",
+  "version": "3.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "nodemailer",
+    "email"
+  ],
+  "author": "sps003",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/nodemailer": "^6.4.14",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "mg-newsletter": "^1.0.1",
+    "mongoose": "^8.1.1",
+    "nodemailer": "^6.9.9"
+  }
+}
