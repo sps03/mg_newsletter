@@ -1,3 +1,4 @@
+
 const nodemailer = require('nodemailer');
 
 async function sendFavMail(emailTemplate, smtpConfig, recipient, data) {
@@ -12,18 +13,10 @@ async function sendFavMail(emailTemplate, smtpConfig, recipient, data) {
       }
     });
 
-    let subject = '`New Job Submission for Favorite Company`';
-    let html = `
-    <h1>New Job Submission for Favorite Company</h1>
-    <br/>
-    A new job submission has been made for your favorite company.
-    <br/>
-    Company: ${data.companyName}
-    <br/>
-    Job Title: ${data.jobTitle}
-    <br/>
-    Job Description: ${data.jobDescription}
-  `;
+    let subject = emailTemplate.subject;
+    let html = emailTemplate.body.replace(/{{([^{}]*)}}/g, (match, key) => {
+      return data[key.trim()] || '';
+    });
 
     let info = await transporter.sendMail({
       from: '"MetaGeeks" ',
