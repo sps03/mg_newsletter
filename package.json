@@ -1,6 +1,6 @@
 {
-  "name": "mg_newsletter",
-  "version": "4.0.0",
+  "name": "mgnews",
+  "version": "7.0.0",
   "description": "",
   "main": "src/server.js",
   "scripts": {
